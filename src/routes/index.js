@@ -1,12 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Main from "../pages/Main";
+import Footer from "../components/Footer"
 
 const Routes = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact to="/" component={Main} />
-    </Switch>
+    <Fragment>
+      <Switch>
+        <Route exact to="/" component={Main} />
+      </Switch>
+      <Footer />
+    </Fragment>
   </BrowserRouter>
 );
 
