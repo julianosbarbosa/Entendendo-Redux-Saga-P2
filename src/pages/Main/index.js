@@ -10,7 +10,7 @@ class Main extends Component {
 
   handleAddRepository = (e) => {
     e.preventDefault();
-    this.props.addFavorite()
+    this.props.addFavoriteRequest(this.state.repositoryInput)
   }
 
   render() {
@@ -21,7 +21,7 @@ class Main extends Component {
             type="text"
             placeholder="usuario/repositorio"
             value={this.state.repositoryInput}
-            onchange={e => this.setState({ repositoryInput: e.target.value })}
+            onChange={e => this.setState({ repositoryInput: e.target.value })}
           />
           <button type="submit">Cadastrar</button>
         </form>
