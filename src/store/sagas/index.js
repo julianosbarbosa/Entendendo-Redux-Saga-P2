@@ -1,8 +1,6 @@
-import { all, takeLatest } from 'redux-saga/effects';
-import { addFavorite } from './favorites'
-
+import { all, takeLatest } from "redux-saga/effects";
+import { addFavorite } from "./favorites";
+import { Types as FavoritesTypes } from "../ducks/favorites";
 export default function* rootSaga() {
-  yield all([
-    takeLatest('ADD_FAVORITES_REQUEST', addFavorite)
-  ]);
+  yield all([takeLatest(FavoritesTypes.ADD_REQUEST, addFavorite)]);
 }
